@@ -1,16 +1,27 @@
-function add () {
-	
+function add (...Args) {
+	return Args.reduce((previous, current) => {
+		return previous + current;
+	  });
 }
 
-function subtract () {
-	
+function subtract (...Args) {
+	return Args.reduce((previous, current) => {
+		return previous - current;
+	})
 }
 
-function sum () {
-	
+function sum (array) {
+	var reducer = (accumulator, currentValue) => accumulator + currentValue;
+	if (array === []) {
+		return 0;
+	} else {
+		
+	 return array.reduce(reducer);
+	}
 }
-
-function multiply () {
+function multiply (array) {
+	reducer = (accumulator, currentValue) => accumulator * currentValue;
+	return array.reduce(reducer)
 	
 }
 
