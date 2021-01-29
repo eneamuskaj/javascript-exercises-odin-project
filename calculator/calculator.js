@@ -12,7 +12,7 @@ function subtract (...Args) {
 
 function sum (array) {
 	var reducer = (accumulator, currentValue) => accumulator + currentValue;
-	if (array === []) {
+	if (array.length < 1) {
 		return 0;
 	} else {
 		
@@ -25,12 +25,22 @@ function multiply (array) {
 	
 }
 
-function power() {
-	
+function power(number, power) {
+	return Math.pow(number, power)
 }
 
-function factorial() {
-	
+function factorial(num) {
+	if (num === 0) {
+		return 1
+	} else {
+	let array = []
+	for (let i = num; i > 0; i--) {
+    array.push(i);
+  }
+  reducer =(prevValue, currentValue) => prevValue * currentValue;
+  return array.reduce(reducer)
+
+}
 }
 
 module.exports = {
