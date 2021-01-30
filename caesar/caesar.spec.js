@@ -7,13 +7,13 @@ describe('caesar', function() {
   it('works with words', function() {
     expect(caesar('Aaa', 1)).toEqual('Bbb');
   });
-  xit('works with phrases', function() {
+  it('works with phrases', function() {
     expect(caesar('Hello, World!', 5)).toEqual('Mjqqt, Btwqi!');
   });
-  xit('works with negative shift', function() {
+  it('works with negative shift', function() {
     expect(caesar('Mjqqt, Btwqi!', -5)).toEqual('Hello, World!');
   });
-  xit('wraps', function() {
+  it('wraps', function() {
     expect(caesar('Z', 1)).toEqual('A');
   });
   xit('works with large shift factors', function() {

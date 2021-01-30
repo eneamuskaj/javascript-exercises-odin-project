@@ -4,7 +4,13 @@ const caesar = function(str, num) {
     splitted = str.split("");
     for (let i=0; i<splitted.length; i++) {
         if ( (/[a-zA-Z]/).test(splitted[i])) {
-            if ( (splitted[i].charCodeAt(0) + num) > 122 ) {
+            if (splitted[i] === splitted[i].toUpperCase() && (splitted[i].charCodeAt(0) + num >90 )) {
+                arrayChar.push( (splitted[i].charCodeAt(0) + num) -26 )
+            } else if
+                 (splitted[i] === splitted[i].toUpperCase() && (splitted[i].charCodeAt(0) + num < 65 )) {
+                 arrayChar.push( (splitted[i].charCodeAt(0) + num) +26 )
+            }
+            else if (splitted[i] === splitted[i].toUpperCase() && (splitted[i].charCodeAt(0) + num) > 122 ) {
                 arrayChar.push( (splitted[i].charCodeAt(0) + num) -26 )
             } else {
             arrayChar.push(splitted[i].charCodeAt(0) + num);
